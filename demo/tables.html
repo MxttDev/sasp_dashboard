@@ -1165,7 +1165,7 @@
           <div class="container-xl">
             <div class="row g-2 align-items-center">
               <div class="col">
-                <h2 class="page-title">User Management</h2>
+                <h2 class="page-title">San Andreas State Police Users</h2>
               </div>
               <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
@@ -1237,7 +1237,7 @@
                       <thead>
                         <tr>
                           <th>Name</th>
-                          <th>Level</th>
+                          <th>Discord ID</th>
                           <th>Role</th>
                           <th class="w-1"></th>
                         </tr>
@@ -1263,96 +1263,6 @@
                             <div>Command</div>
                           </td>
                           <td data-label="Role">Comissioner</td>
-                          <td>
-                            <div class="btn-list flex-nowrap">
-                              <div class="dropdown">
-                                <button
-                                  class="btn dropdown-toggle align-text-top"
-                                  data-bs-toggle="dropdown"
-                                >
-                                  Actions
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#">
-                                    Send Message
-                                  </a>
-                                  <a class="dropdown-item" href="#">
-                                    Promote
-                                  </a>
-                                  <a class="dropdown-item" href="#"> Demote </a>
-                                  <a class="dropdown-item danger" href="#">
-                                    Fire
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Name">
-                            <div class="d-flex py-1 align-items-center">
-                              <span
-                                class="avatar me-2"
-                                style="
-                                  background-image: url(./static/avatars/010m.jpg);
-                                "
-                              ></span>
-                              <div class="flex-fill">
-                                <div class="font-weight-medium">
-                                  Albert Kitan
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td data-label="Title">
-                            <div></div>
-                          </td>
-                          <td class="text-muted" data-label="Role">Trooper</td>
-                          <td>
-                            <div class="btn-list flex-nowrap">
-                              <div class="dropdown">
-                                <button
-                                  class="btn dropdown-toggle align-text-top"
-                                  data-bs-toggle="dropdown"
-                                >
-                                  Actions
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#">
-                                    Send Message
-                                  </a>
-                                  <a class="dropdown-item" href="#">
-                                    Promote
-                                  </a>
-                                  <a class="dropdown-item" href="#"> Demote </a>
-                                  <a class="dropdown-item danger" href="#">
-                                    Fire
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Name">
-                            <div class="d-flex py-1 align-items-center">
-                              <span
-                                class="avatar me-2"
-                                style="
-                                  background-image: url(./static/avatars/010m.jpg);
-                                "
-                              ></span>
-                              <div class="flex-fill">
-                                <div class="font-weight-medium">Connor W</div>
-                              </div>
-                            </div>
-                          </td>
-                          <td data-label="Title">
-                            <div>Supervisor</div>
-                          </td>
-                          <td class="text-muted" data-label="Role">
-                            Lieutenant
-                          </td>
                           <td>
                             <div class="btn-list flex-nowrap">
                               <div class="dropdown">
@@ -1483,6 +1393,7 @@
               <label class="form-label">Name</label>
               <input
                 type="text"
+                id="inputName"
                 class="form-control"
                 name="example-text-input"
                 placeholder="Player's name"
@@ -1492,6 +1403,7 @@
               <label class="form-label">Discord ID</label>
               <input
                 type="text"
+                id="inputID"
                 class="form-control"
                 name="example-text-input"
                 placeholder="ID"
@@ -1502,30 +1414,22 @@
               <div class="col-lg-8">
                 <div class="mb-3">
                   <label class="form-label">Rank</label>
-                  <select class="form-select">
+                  <select class="form-select" id="inputRank">
                     <option value="1" selected>Rank1</option>
                     <option value="2">Rank2</option>
                     <option value="3">Rank3</option>
                   </select>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="card-title">Basic Usage</h3>
-                    <form
-                      class="dropzone"
-                      id="dropzone-default"
-                      action="./"
-                      autocomplete="off"
-                      novalidate
-                    >
-                      <div class="fallback">
-                        <input name="file" type="file" />
-                      </div>
-                    </form>
-                  </div>
-                </div>
+              <div class="mb-3">
+                <label class="form-label">User Image</label>
+                <input
+                  type="text"
+                  id="inputPFP"
+                  class="form-control"
+                  name="example-text-input"
+                  placeholder="(Image URL)"
+                />
               </div>
             </div>
           </div>

@@ -1,12 +1,12 @@
 document.getElementById("createUser").onclick = function () {
-  createUser();
+  const Name = document.getElementById("inputName");
+  const ID = document.getElementById("inputID");
+  const Rank = document.getElementById("inputRank");
+  const PFP = document.getElementById("InputPFP");
+  createUser(Name.value, ID.value, "test");
 };
 
-function addElement() {
-  let name = "David Craig";
-  let level = "Supervisor";
-  let role = "Trooper";
-
+function addElement(name, id, role, pfp) {
   const newDiv = document.createElement("tr");
   const Name = document.createElement("td");
   const Title = document.createElement("td");
@@ -27,7 +27,7 @@ function addElement() {
   Name.setAttribute("data-label", "Name");
   Title.setAttribute("data-label", "Title");
   Role.innerHTML = role;
-  TitleLevel.innerHTML = level;
+  TitleLevel.innerHTML = id;
 
   Actionsone.className = "btn-list flex-nowrap";
   ActionDropdown.className = "dropdown";
@@ -62,7 +62,7 @@ function addElement() {
   User.className = "d-flex py-1 align-items-center";
 
   UserPfp.className = "avatar me-2";
-  UserPfp.style = "background-image: url(./static/avatars/010m.jpg);";
+  UserPfp.style = "background-image: url(" + pfp + ");";
 
   const UserName = document.createElement("div");
   UserName.className = "font-weight-medium";
@@ -104,7 +104,6 @@ function addElement() {
   currentDiv.parentElement.insertBefore(newDiv, currentDiv);
 }
 
-function createUser() {
-  addElement();
-  alert("You have created the user!");
+function createUser(Name, ID, Role) {
+  addElement(Name, ID, Role);
 }
