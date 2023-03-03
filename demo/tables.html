@@ -1230,19 +1230,64 @@
             <div class="row row-cards">
               <div class="col-12">
                 <div class="card">
-                  <div class="table-responsive">
+                  <div class="table-responsive" id="CreatUsers1">
                     <table
                       class="table table-vcenter table-mobile-md card-table"
                     >
                       <thead>
                         <tr>
                           <th>Name</th>
-                          <th>Title</th>
+                          <th>Level</th>
                           <th>Role</th>
                           <th class="w-1"></th>
                         </tr>
                       </thead>
                       <tbody>
+                        <tr id="userBody">
+                          <td data-label="Name">
+                            <div class="d-flex py-1 align-items-center">
+                              <span
+                                class="avatar me-2"
+                                style="
+                                  background-image: url(./static/avatars/010m.jpg);
+                                "
+                              ></span>
+                              <div class="flex-fill">
+                                <div class="font-weight-medium">
+                                  Matt Johnston
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td data-label="Title">
+                            <div>Command</div>
+                          </td>
+                          <td data-label="Role">Comissioner</td>
+                          <td>
+                            <div class="btn-list flex-nowrap">
+                              <div class="dropdown">
+                                <button
+                                  class="btn dropdown-toggle align-text-top"
+                                  data-bs-toggle="dropdown"
+                                >
+                                  Actions
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">
+                                    Send Message
+                                  </a>
+                                  <a class="dropdown-item" href="#">
+                                    Promote
+                                  </a>
+                                  <a class="dropdown-item" href="#"> Demote </a>
+                                  <a class="dropdown-item danger" href="#">
+                                    Fire
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
                         <tr>
                           <td data-label="Name">
                             <div class="d-flex py-1 align-items-center">
@@ -1254,24 +1299,17 @@
                               ></span>
                               <div class="flex-fill">
                                 <div class="font-weight-medium">
-                                  Thatcher Keel
-                                </div>
-                                <div class="text-muted">
-                                  <a href="#" class="text-reset"
-                                    >tkeelf@blogger.com</a
-                                  >
+                                  Albert Kitan
                                 </div>
                               </div>
                             </div>
                           </td>
                           <td data-label="Title">
-                            <div>VP Sales</div>
-                            <div class="text-muted">Business Development</div>
+                            <div></div>
                           </td>
-                          <td class="text-muted" data-label="Role">User</td>
+                          <td class="text-muted" data-label="Role">Trooper</td>
                           <td>
                             <div class="btn-list flex-nowrap">
-                              <a href="#" class="btn"> Edit </a>
                               <div class="dropdown">
                                 <button
                                   class="btn dropdown-toggle align-text-top"
@@ -1280,9 +1318,15 @@
                                   Actions
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#"> Action </a>
                                   <a class="dropdown-item" href="#">
-                                    Another action
+                                    Send Message
+                                  </a>
+                                  <a class="dropdown-item" href="#">
+                                    Promote
+                                  </a>
+                                  <a class="dropdown-item" href="#"> Demote </a>
+                                  <a class="dropdown-item danger" href="#">
+                                    Fire
                                   </a>
                                 </div>
                               </div>
@@ -1295,29 +1339,22 @@
                               <span
                                 class="avatar me-2"
                                 style="
-                                  background-image: url(./static/avatars/005f.jpg);
+                                  background-image: url(./static/avatars/010m.jpg);
                                 "
                               ></span>
                               <div class="flex-fill">
-                                <div class="font-weight-medium">
-                                  Dyann Escala
-                                </div>
-                                <div class="text-muted">
-                                  <a href="#" class="text-reset"
-                                    >descalag@usatoday.com</a
-                                  >
-                                </div>
+                                <div class="font-weight-medium">Connor W</div>
                               </div>
                             </div>
                           </td>
                           <td data-label="Title">
-                            <div>Mechanical Systems Engineer</div>
-                            <div class="text-muted">Sales</div>
+                            <div>Supervisor</div>
                           </td>
-                          <td class="text-muted" data-label="Role">Admin</td>
+                          <td class="text-muted" data-label="Role">
+                            Lieutenant
+                          </td>
                           <td>
                             <div class="btn-list flex-nowrap">
-                              <a href="#" class="btn"> Edit </a>
                               <div class="dropdown">
                                 <button
                                   class="btn dropdown-toggle align-text-top"
@@ -1326,142 +1363,15 @@
                                   Actions
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#"> Action </a>
                                   <a class="dropdown-item" href="#">
-                                    Another action
+                                    Send Message
                                   </a>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Name">
-                            <div class="d-flex py-1 align-items-center">
-                              <span
-                                class="avatar me-2"
-                                style="
-                                  background-image: url(./static/avatars/006f.jpg);
-                                "
-                              ></span>
-                              <div class="flex-fill">
-                                <div class="font-weight-medium">
-                                  Avivah Mugleston
-                                </div>
-                                <div class="text-muted">
-                                  <a href="#" class="text-reset"
-                                    >amuglestonh@intel.com</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td data-label="Title">
-                            <div>Actuary</div>
-                            <div class="text-muted">Sales</div>
-                          </td>
-                          <td class="text-muted" data-label="Role">User</td>
-                          <td>
-                            <div class="btn-list flex-nowrap">
-                              <a href="#" class="btn"> Edit </a>
-                              <div class="dropdown">
-                                <button
-                                  class="btn dropdown-toggle align-text-top"
-                                  data-bs-toggle="dropdown"
-                                >
-                                  Actions
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#"> Action </a>
                                   <a class="dropdown-item" href="#">
-                                    Another action
+                                    Promote
                                   </a>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Name">
-                            <div class="d-flex py-1 align-items-center">
-                              <span class="avatar me-2">AA</span>
-                              <div class="flex-fill">
-                                <div class="font-weight-medium">
-                                  Arlie Armstead
-                                </div>
-                                <div class="text-muted">
-                                  <a href="#" class="text-reset"
-                                    >aarmsteadi@yellowpages.com</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td data-label="Title">
-                            <div>VP Quality Control</div>
-                            <div class="text-muted">Accounting</div>
-                          </td>
-                          <td class="text-muted" data-label="Role">Owner</td>
-                          <td>
-                            <div class="btn-list flex-nowrap">
-                              <a href="#" class="btn"> Edit </a>
-                              <div class="dropdown">
-                                <button
-                                  class="btn dropdown-toggle align-text-top"
-                                  data-bs-toggle="dropdown"
-                                >
-                                  Actions
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#"> Action </a>
-                                  <a class="dropdown-item" href="#">
-                                    Another action
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Name">
-                            <div class="d-flex py-1 align-items-center">
-                              <span
-                                class="avatar me-2"
-                                style="
-                                  background-image: url(./static/avatars/008f.jpg);
-                                "
-                              ></span>
-                              <div class="flex-fill">
-                                <div class="font-weight-medium">
-                                  Tessie Curzon
-                                </div>
-                                <div class="text-muted">
-                                  <a href="#" class="text-reset"
-                                    >tcurzonj@hp.com</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td data-label="Title">
-                            <div>Research Nurse</div>
-                            <div class="text-muted">Product Management</div>
-                          </td>
-                          <td class="text-muted" data-label="Role">Admin</td>
-                          <td>
-                            <div class="btn-list flex-nowrap">
-                              <a href="#" class="btn"> Edit </a>
-                              <div class="dropdown">
-                                <button
-                                  class="btn dropdown-toggle align-text-top"
-                                  data-bs-toggle="dropdown"
-                                >
-                                  Actions
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#"> Action </a>
-                                  <a class="dropdown-item" href="#">
-                                    Another action
+                                  <a class="dropdown-item" href="#"> Demote </a>
+                                  <a class="dropdown-item danger" href="#">
+                                    Fire
                                   </a>
                                 </div>
                               </div>
