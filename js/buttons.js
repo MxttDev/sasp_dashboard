@@ -12,6 +12,13 @@ function addElement() {
   const Title = document.createElement("td");
   const Role = document.createElement("td");
 
+  const Actions = document.createElement("td");
+  const Actionsone = document.createElement("div");
+  const ActionDropdown = document.createElement("div");
+  const ActionAction = document.createElement("button");
+
+  const ActionOne = document.createElement("div");
+
   const TitleLevel = document.createElement("div");
 
   const User = document.createElement("div");
@@ -21,6 +28,36 @@ function addElement() {
   Title.setAttribute("data-label", "Title");
   Role.innerHTML = role;
   TitleLevel.innerHTML = level;
+
+  Actionsone.className = "btn-list flex-nowrap";
+  ActionDropdown.className = "dropdown";
+  ActionAction.className = "btn dropdown-toggle align-text-top";
+  ActionAction.setAttribute("data-bs-toggle", "dropdown");
+  ActionAction.innerHTML = "Actions";
+
+  const ActionOneMsg = document.createElement("a");
+  const ActionOnePromote = document.createElement("a");
+  const ActionOneDemote = document.createElement("a");
+  const ActionOneFire = document.createElement("a");
+  ActionOne.className = "dropdown-menu dropdown-menu-end";
+  ActionOneMsg.className = "dropdown-item";
+  ActionOneMsg.setAttribute("href", "#");
+  ActionOneMsg.innerHTML = "Send Message";
+
+  ActionOnePromote.className = "dropdown-menu dropdown-menu-end";
+  ActionOnePromote.className = "dropdown-item";
+  ActionOnePromote.setAttribute("href", "#");
+  ActionOnePromote.innerHTML = "Promote";
+
+  ActionOneDemote.className = "dropdown-menu dropdown-menu-end";
+  ActionOneDemote.className = "dropdown-item";
+  ActionOneDemote.setAttribute("href", "#");
+  ActionOneDemote.innerHTML = "Demote";
+
+  ActionOneFire.className = "dropdown-menu dropdown-menu-end";
+  ActionOneFire.className = "dropdown-item";
+  ActionOneFire.setAttribute("href", "#");
+  ActionOneFire.innerHTML = "Fire";
 
   User.className = "d-flex py-1 align-items-center";
 
@@ -34,10 +71,21 @@ function addElement() {
   newDiv.appendChild(Name);
   newDiv.appendChild(Title);
   newDiv.appendChild(Role);
+  newDiv.appendChild(Actions);
   Name.appendChild(User);
   Title.appendChild(TitleLevel);
   User.appendChild(UserPfp);
   User.appendChild(UserName);
+
+  Actions.appendChild(Actionsone);
+  Actionsone.appendChild(ActionDropdown);
+  ActionDropdown.appendChild(ActionOne);
+  ActionOne.appendChild(ActionOneMsg);
+  ActionOne.appendChild(ActionOnePromote);
+  ActionOne.appendChild(ActionOneDemote);
+  ActionOne.appendChild(ActionOneFire);
+
+  ActionDropdown.appendChild(ActionAction);
 
   const currentDiv = document.getElementById("userBody");
   const num1 = currentDiv.parentNode;
