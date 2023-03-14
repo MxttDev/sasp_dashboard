@@ -2,22 +2,22 @@ document.getElementById("createUser").onclick = function () {
   const Name = document.getElementById("inputName");
   const ID = document.getElementById("inputID");
   const Rank = document.getElementById("inputRank");
-  const PFP = document.getElementById("InputPFP");
-  createUser(Name.value, ID.value, "test");
+  const PFP = document.getElementById("inputPFP");
+  const Hours = "2";
+  const Hired = "13/03/2023";
+  createUser(Name.value, ID.value, "Major", PFP.value, Hours, Hired);
 };
 
-function addElement(name, id, role, pfp) {
+function addElement(name, id, role, pfp, hours, hired) {
   const newDiv = document.createElement("tr");
   const Name = document.createElement("td");
   const Title = document.createElement("td");
   const Role = document.createElement("td");
+  const Hours = document.createElement("td");
+  const Hired = document.createElement("td");
 
-  const Actions = document.createElement("td");
-  const Actionsone = document.createElement("div");
-  const ActionDropdown = document.createElement("div");
-  const ActionAction = document.createElement("button");
-
-  const ActionOne = document.createElement("div");
+  const Edit = document.createElement("td");
+  const Edit2 = document.createElement("a");
 
   const TitleLevel = document.createElement("div");
 
@@ -27,37 +27,15 @@ function addElement(name, id, role, pfp) {
   Name.setAttribute("data-label", "Name");
   Title.setAttribute("data-label", "Title");
   Role.innerHTML = role;
+  Hours.innerHTML = hours;
+  Hired.innerHTML = hired;
+
   TitleLevel.innerHTML = id;
-
-  Actionsone.className = "btn-list flex-nowrap";
-  ActionDropdown.className = "dropdown";
-  ActionAction.className = "btn dropdown-toggle align-text-top";
-  ActionAction.setAttribute("data-bs-toggle", "dropdown");
-  ActionAction.innerHTML = "Actions";
-
-  const ActionOneMsg = document.createElement("a");
-  const ActionOnePromote = document.createElement("a");
-  const ActionOneDemote = document.createElement("a");
-  const ActionOneFire = document.createElement("a");
-  ActionOne.className = "dropdown-menu dropdown-menu-end";
-  ActionOneMsg.className = "dropdown-item";
-  ActionOneMsg.setAttribute("href", "#");
-  ActionOneMsg.innerHTML = "Send Message";
-
-  ActionOnePromote.className = "dropdown-menu dropdown-menu-end";
-  ActionOnePromote.className = "dropdown-item";
-  ActionOnePromote.setAttribute("href", "#");
-  ActionOnePromote.innerHTML = "Promote";
-
-  ActionOneDemote.className = "dropdown-menu dropdown-menu-end";
-  ActionOneDemote.className = "dropdown-item";
-  ActionOneDemote.setAttribute("href", "#");
-  ActionOneDemote.innerHTML = "Demote";
-
-  ActionOneFire.className = "dropdown-menu dropdown-menu-end";
-  ActionOneFire.className = "dropdown-item";
-  ActionOneFire.setAttribute("href", "#");
-  ActionOneFire.innerHTML = "Fire";
+  Edit2.setAttribute("href", "#");
+  Edit2.setAttribute("data-bs-toggle", "modal");
+  Edit2.setAttribute("data-bs-target", "#modal-userManagement");
+  Edit2.setAttribute("aria-label", "Edit");
+  Edit2.innerText = "Edit";
 
   User.className = "d-flex py-1 align-items-center";
 
@@ -71,21 +49,15 @@ function addElement(name, id, role, pfp) {
   newDiv.appendChild(Name);
   newDiv.appendChild(Title);
   newDiv.appendChild(Role);
-  newDiv.appendChild(Actions);
+  newDiv.appendChild(Hours);
+  newDiv.appendChild(Hired);
+  newDiv.appendChild(Edit);
+
   Name.appendChild(User);
   Title.appendChild(TitleLevel);
   User.appendChild(UserPfp);
   User.appendChild(UserName);
-
-  Actions.appendChild(Actionsone);
-  Actionsone.appendChild(ActionDropdown);
-  ActionDropdown.appendChild(ActionOne);
-  ActionOne.appendChild(ActionOneMsg);
-  ActionOne.appendChild(ActionOnePromote);
-  ActionOne.appendChild(ActionOneDemote);
-  ActionOne.appendChild(ActionOneFire);
-
-  ActionDropdown.appendChild(ActionAction);
+  Edit.appendChild(Edit2);
 
   const currentDiv = document.getElementById("userBody");
   const num1 = currentDiv.parentNode;
@@ -104,6 +76,6 @@ function addElement(name, id, role, pfp) {
   currentDiv.parentElement.insertBefore(newDiv, currentDiv);
 }
 
-function createUser(Name, ID, Role) {
-  addElement(Name, ID, Role);
+function createUser(Name, ID, Role, PFP, Hours, Hired) {
+  addElement(Name, ID, Role, PFP, Hours, Hired);
 }

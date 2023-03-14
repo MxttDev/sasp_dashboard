@@ -1239,6 +1239,8 @@
                           <th>Name</th>
                           <th>Discord ID</th>
                           <th>Role</th>
+                          <th>Hours</th>
+                          <th>Hired</th>
                           <th class="w-1"></th>
                         </tr>
                       </thead>
@@ -1263,29 +1265,16 @@
                             <div>Command</div>
                           </td>
                           <td data-label="Role">Comissioner</td>
+                          <td data-label="Hours">2</td>
+                          <td data-label="Hired">13/03/2023</td>
                           <td>
-                            <div class="btn-list flex-nowrap">
-                              <div class="dropdown">
-                                <button
-                                  class="btn dropdown-toggle align-text-top"
-                                  data-bs-toggle="dropdown"
-                                >
-                                  Actions
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                  <a class="dropdown-item" href="#">
-                                    Send Message
-                                  </a>
-                                  <a class="dropdown-item" href="#">
-                                    Promote
-                                  </a>
-                                  <a class="dropdown-item" href="#"> Demote </a>
-                                  <a class="dropdown-item danger" href="#">
-                                    Fire
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
+                            <a
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-userManagement"
+                              aria-label="New User"
+                              >Edit</a
+                            >
                           </td>
                         </tr>
                       </tbody>
@@ -1450,6 +1439,81 @@
             >
               Create
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal modal-blur fade"
+      id="modal-userManagement"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="container-xl">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">User data</h3>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                <div class="card-body">
+                  <div class="datagrid">
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">CHARACTER NAME</div>
+                      <div class="datagrid-content">Matt Johnston</div>
+                    </div>
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">Discord ID</div>
+                      <div class="datagrid-content">390233831719829505</div>
+                    </div>
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">Role</div>
+                      <div class="datagrid-content">
+                        <span class="status status-green"> Comissioner </span>
+                      </div>
+                    </div>
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">Badge Number</div>
+                      <div class="datagrid-content">
+                        <span class="status status-orange"> SP-122 </span>
+                      </div>
+                    </div>
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">Join Date</div>
+                      <div class="datagrid-content">13/03/2023</div>
+                    </div>
+
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">Last Promotion</div>
+                      <div class="datagrid-content">13/03/2023</div>
+                    </div>
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">Hours</div>
+                      <div class="datagrid-content">3</div>
+                    </div>
+
+                    <div class="datagrid-item">
+                      <div class="datagrid-title">Notes</div>
+                      <div class="datagrid-content">
+                        <input
+                          type="text"
+                          class="form-control form-control-flush"
+                          placeholder="Insert notes"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
